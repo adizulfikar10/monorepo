@@ -1,0 +1,25 @@
+{
+  "name": "blog-web",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/blog-web/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project blog-web --web",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/blog-web"
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "blog-web:build",
+        "dev": true,
+        "port": 4200
+      }
+    }
+  }
+}
