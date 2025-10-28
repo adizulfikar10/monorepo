@@ -52,5 +52,6 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "styled-components": "^5.3.11"
-  }
+  },
+  "packageManager": "pnpm@9.11.0+sha1.4cd20e68438613738e8f2bc9aece61eaa6b3e649"
 }

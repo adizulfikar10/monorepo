@@ -10,6 +10,29 @@ This monorepo contains a demo blog app and libraries built with Nx. The key focu
 - `libs/services`: Data types and utilities.
 - `libs/providers`, `libs/hooks`: Supporting utilities.
 
+## UI Templates
+
+The UI library provides a high-level page template to accelerate feature pages:
+
+- `BlogPageTemplate`: Composes `Heading`, `Text`, and `BlogList` and applies theme tokens.
+
+Usage in `apps/blog-web/src/templates/BlogIndex.client.tsx`:
+
+```tsx
+import { BlogPageTemplate } from '@monorepo/ui-components';
+
+export default function BlogIndex({ blogs }) {
+  const items = blogs.map(b => ({ title: b.title, excerpt: b.excerpt, author: b.author }));
+  return (
+    <BlogPageTemplate
+      title={`Category Sport`}
+      subtitle={`Device: Mobile`}
+      items={items}
+    />
+  );
+}
+```
+
 ## Design Tokens
 
 - `globals`: Source of truth for actual values.
@@ -78,6 +101,8 @@ With this pattern, components pass keys from `theme.semantic.*`, while atoms res
 - Start dev server: `nx serve blog-web`
 
 Preview is available at `http://localhost:4200/` (Nx + Next.js default).
+
+See app docs: `apps/blog-web/README.md` for more examples.
 
 ## Tenant Selection
 

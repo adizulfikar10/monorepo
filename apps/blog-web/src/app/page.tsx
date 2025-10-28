@@ -1,5 +1,5 @@
 /** @jsxImportSource react */
-import BlogIndex from '../templates/BlogIndex.client';
+import BlogIndex from '../modules/BlogIndex.client';
 import { listBlogs, type Blog } from '@monorepo/services';
 
 export default async function Page() {

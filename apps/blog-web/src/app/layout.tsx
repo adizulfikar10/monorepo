@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id">
       <head></head>
-      <body>
+      <body suppressHydrationWarning>
         <RootLayout>{children}</RootLayout>
       </body>
     </html>
